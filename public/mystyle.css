@@ -1,0 +1,126 @@
+/* unordered list */
+
+.container {
+  margin: 20px;
+  padding: 0px;
+  text-align: center;
+}
+
+.divWithBorder {
+  border-style: dashed;  
+  border-radius: 5px;
+}
+
+ul {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.pickInput {
+  width: 50%;
+  font-family: 'Ubuntu', sans-serif;
+  /* have a nice bold rounded box */
+  border: 2px solid #ccc;
+  /* border-radius: 40px; */
+  font-size: 16px;
+  background-color: white;
+  padding: 12px 20px 12px 40px;
+  margin: 10px;
+}
+
+.searchInput {
+  width: 30%;
+  font-family: 'Ubuntu', sans-serif;
+  /* have a nice bold rounded box */
+  border: 2px solid #ccc;
+  border-radius: 40px;
+  font-size: 16px;
+  background-color: white;
+  padding: 12px 20px 12px 40px;
+  margin: 10px;
+}
+
+.result {
+  border: 1px solid #ccc;
+  color: #555;
+  display: block;
+  padding: 10px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.wikiImg {
+  float: left;
+  margin-right: 10px;
+}
+
+.wikiTitle {
+  color: blue;
+  margin-right: 70px;
+}
+
+.preview {
+  width: 800;
+  height: 800;
+  margin-right: 350px;
+}
+
+.TOCul {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 300px;
+}
+
+.liTOC {
+  margin: 5px;
+}
+
+.pickButton {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  height: 70px;
+  width: 70px;
+}
+
+#triggeredLi {
+  color: red;
+}
+
+/* used to have a dialog button positioned in the middle; from the Cook's answer: https://stackoverflow.com/questions/960693/jquery-ui-dialog-button-positioning */
+.centerDialogButton {
+  margin-right: 450px !important;
+}
+
+.staticIframeContainer {
+  width: 100%;
+  height: 300px;
+  position: relative; 
+  overflow: hidden;
+  text-align: center;
+}
+.staticIframeContainer iframe {
+  z-index: 1;
+  pointer-events: none;
+  border: 0;
+}
+
+.cancelButton {
+  float: right;
+}
+.cancelP {
+  display: inline-block;
+}
+
+/* TODO: make it such that you have to hover for a certain amount of time before this is triggered! */
+
+
+/* for a preview of a returned wiki page search result */
+
+
+/* .wikiTitle:hover + .hiddenBox,.hiddenBox:hover{
+  display: block;
+  position: relative;
+  z-index: 100;
+} */

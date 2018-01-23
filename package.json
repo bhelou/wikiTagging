@@ -1,0 +1,19 @@
+{
+  "name": "wiki_search",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon --inspect app.js"
+  },
+  "dependenciesComments": {
+    "comm1": "^ (caret) means to update latest version and ~ (tilde) means update the latest patch (minor) version"
+  },
+  "dependencies": {
+    "express": "^4.11.1",
+    "is-url": "^1.2.2",
+    "jade": "^1.9.1",
+    "marklogic": "^1.0.1",
+    "valid-url": "^1.0.9"
+  }
+}

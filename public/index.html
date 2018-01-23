@@ -1,0 +1,53 @@
+<html>
+<!-- my CSS -->
+<link rel="stylesheet" type="text/css" href="mystyle.css">
+<!-- jquery-ui CSS -->
+<link rel="stylesheet" href="./js/external/jquery-ui.min.css">
+
+<!-- jquery -->
+<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+<!-- jquery-ui -->
+<script src="./js/external/jquery-ui.min.js"></script>
+<!-- my script -->
+<script src="./js/wikiSearch.js"></script>
+
+<body>
+    <!-- add the ability to pick a website to categorize -->
+    <div class="container divWithBorder" id="webPickDiv">
+        <h3 style="margin: 0; text-align: left !important"> Website to Tag </h3>
+        <input id="pickWebsite" type="text" class="pickInput" placeholder="Pick a website (press Enter to confirm) ..." />
+    </div>
+
+    <!-- pick the type of relation -->
+    <div class="container" id="relationDiv">
+        <form>
+            <select name="relation" id="relation">
+                <option disabled selected>Please pick a relation</option>
+                <option>is an example of </option>
+                <option>is an exercise of </option>
+                <option>is an explanation of </option>
+                <option>is an overview of </option>
+                <option>is on the topic of </option>
+            </select>
+        </form>
+    </div>
+
+
+    <!-- implementation 3 from https://codepen.io/saksham_zz/pen/oeYrbm -->
+    <div class="container divWithBorder" id="wikiSearchDiv">
+        <h3 style="margin: 0; text-align: left !important"> Wikipedia Tag </h3>
+        <input id="searchTerm" type="text" class="searchInput" placeholder="Search for topics ..." />
+    </div>
+    <!-- ul is unordered list -->
+    <ul id="output"> </ul>
+    <br>
+
+    <!-- add a submit button -->
+    <div class="container">
+        <button id="submit" align="center"> Submit </button>
+    </div>
+
+
+</body>
+
+</html>

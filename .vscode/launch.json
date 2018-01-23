@@ -1,0 +1,54 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Server",
+            "port": 9229,
+            "protocol": "inspector",
+            "restart": true,
+            "runtimeExecutable": "npm",
+            "runtimeArgs": ["run-script", "start"],
+            "console": "integratedTerminal"
+        }
+    ]
+}
+
+
+// {
+//     // Use IntelliSense to learn about possible attributes.
+//     // Hover to view descriptions of existing attributes.
+//     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+//     "version": "0.2.0",
+//     "configurations": [
+//         {
+//             "type": "node",
+//             "request": "launch",
+//             "name": "Server",
+//             "port": 9229,
+//             "protocol": "inspector",
+//             "restart": true,
+//             "runtimeExecutable": "npm",
+//             "runtimeArgs": ["run-script", "start"],
+//             "console": "integratedTerminal"
+//         },
+//         {
+//             "type": "chrome",
+//             "request": "launch",
+//             "name": "Client",
+//             "url": "http://localhost:3060",
+//             "webRoot": "${workspaceRoot}"
+//         }
+//     ],
+//     // from https://code.visualstudio.com/docs/editor/debugging#_multitarget-debugging for server and client side debugging ... but it isn't working ...
+//     "compounds": [
+//         {
+//             "name": "Server/Client",
+//             "configurations": ["Server", "Client"]
+//         }
+//     ]
+// }

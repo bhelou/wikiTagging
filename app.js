@@ -60,33 +60,6 @@ app.post('/', function (req, res, next) {
   let triple = subject + ' ' + predicate + ' ' + object + '.';
 
   // // https://docs.marklogic.com/guide/node-dev/semantics
-  // db.graphs.write('http://marklogic.com/semantics#test-graph', 'text/turtle', triple).result(
-  //   function (response) {
-  //     res.statusCode = 201;
-
-  //     if (response.defaultGraph) {
-  //       console.log('Loaded into default graph');
-  //     } else {
-  //       console.log('Loaded into graph ' + response.graph);
-  //     };
-  //   },
-  //   function (error) {
-  //     res.statusCode = 400;
-  //     return next(Error('error loading info to RDF store'));
-  //   }
-  // );
-
-  // res.statusCode = 201;
-  // db.documents.write({
-  //   uri: '/doc/test.json',
-  //   contentType: 'application/json',
-  //   content: {
-  //     url: req.body.website,
-  //     relation: req.body.relation,
-  //     wikiTag: req.body.wikiTag
-  //   }
-  // }).result(null, error => console.error(error));
-
   db.graphs.sparqlUpdate({
     data: 'INSERT DATA { GRAPH <' + graphURI + '> {' + triple + '}}'
   }).result(
@@ -130,15 +103,31 @@ app.use(function (err, req, res, next) {
 app.listen(app.get('port'));
 console.log('Magic happens on port ' + app.get('port'));
 
-// ======================================================= //
+// ===================== CODE SNIPPETS THAT COULD BE USEFUL ================================== //
 
-//  // add to the database
-//  db.documents.write({
-//   uri: '/doc/test.json',
-//   contentType: 'application/json',
-//   content: {
-//     url: req.body.website,
-//     relation: req.body.relation,
-//     wikiTag: req.body.wikiTag
-//   }
-// }).result(null, error => console.error(error));
+  // db.graphs.write('http://marklogic.com/semantics#test-graph', 'text/turtle', triple).result(
+  //   function (response) {
+  //     res.statusCode = 201;
+
+  //     if (response.defaultGraph) {
+  //       console.log('Loaded into default graph');
+  //     } else {
+  //       console.log('Loaded into graph ' + response.graph);
+  //     };
+  //   },
+  //   function (error) {
+  //     res.statusCode = 400;
+  //     return next(Error('error loading info to RDF store'));
+  //   }
+  // );
+
+  // res.statusCode = 201;
+  // db.documents.write({
+  //   uri: '/doc/test.json',
+  //   contentType: 'application/json',
+  //   content: {
+  //     url: req.body.website,
+  //     relation: req.body.relation,
+  //     wikiTag: req.body.wikiTag
+  //   }
+  // }).result(null, error => console.error(error));
